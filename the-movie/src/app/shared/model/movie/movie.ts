@@ -10,8 +10,8 @@ export class Movie {
   private _hours :string[];
   private _room :Number;
 
-
-	constructor(title?: String, poster?: String, synopsis?: String, genres?: string[], year?: Number, director?: String, actors?: string[], hours?: string[], room?: Number) {
+	constructor(id?: Number, title?: String, poster?: String, synopsis?: String, genres?: string[], year?: Number, director?: String, actors?: string[], hours?: string[], room?: Number) {
+		this._id = id;
 		this._title = title;
 		this._poster = poster;
 		this._synopsis = synopsis;
@@ -21,8 +21,15 @@ export class Movie {
 		this._actors = actors;
 		this._hours = hours;
 		this._room = room;
-  }
+	}
 
+  /**
+     * Getter title
+     * @return {Number}
+     */
+    public get id(): Number {
+      return this._id;
+    }
 
     /**
      * Getter title
@@ -98,6 +105,14 @@ export class Movie {
 
     /**
      * Setter title
+     * @param {Number} value
+     */
+	public set id(value: Number) {
+		this._id = value;
+  }
+
+    /**
+     * Setter title
      * @param {String} value
      */
 	public set title(value: String) {
@@ -167,6 +182,7 @@ export class Movie {
 	public set room(value: Number) {
 		this._room = value;
 	}
+
 
 
 }

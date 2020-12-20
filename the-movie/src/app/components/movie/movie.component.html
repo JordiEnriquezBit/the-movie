@@ -1,1 +1,4 @@
-<p>movie works!</p>
+<div>
+  <a *ngFor="let item of movies" [routerLink]="[item.id]" > {{item.id}}/{{item.title}}</a>
+
+</div>

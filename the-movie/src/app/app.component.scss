@@ -1,0 +1,16 @@
+.expanded-toolbar {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  // opacity: 0;
+  transition: opacity .25s ease-out, height .15s ease;
+  cursor: default;
+  user-select: none;
+}
+button{
+  margin-right: 1em;
+}
+
+

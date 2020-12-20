@@ -1,3 +1,4 @@
+import { Movie } from './../../shared/model/movie/movie';
 import { MovieService } from './../../shared/services/movie.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
 
+  movies:Movie[];
   constructor(private movieService:MovieService) { }
 
   ngOnInit(): void {
-    this.movieService.getJSON();
+    this.getMovies();
+  }
+
+  getMovies(){
+    this.movieService.getMovies().then(data=>{
+      this.movies=data
+      console.log(this.movies)
+      this.movieService.getMovie(2)
+
+    });
   }
 
 }

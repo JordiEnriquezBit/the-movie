@@ -6,20 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MovieService {
-
-  constructor(private http: HttpClient) { }
-    _jsonURL = '../data/movies.json';
-    movies:Movie[]=[];
-
-    public getJSON(){
-      let json =  this.http.get(this._jsonURL);
-      json.subscribe(data=>{
-        console.log(data);
-      });
-
-
-    }
-  getMovies(): Observable<any>{
-    return  this.http.get(this._jsonURL)
+  _jsonURL = '../data/movies.json';
+  movies:Movie[]=[];
+  constructor(private httpClient: HttpClient) {}
+  async getMovies(){
+   await this.httpClient.get("../../../assets/movies.json").toPromise().then(data =>{
+      this.movies = data["movies"] as Movie[]
+    });
+    return this.movies;
   }
+
+   getMovie(id:Number){
+      let movie = this.movies.find(data => data.id == id);
+      return movie;
+   }
+
 }
