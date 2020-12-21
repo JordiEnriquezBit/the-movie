@@ -1,4 +1,22 @@
-<div>
-  <a *ngFor="let item of movies" [routerLink]="[item.id]" > {{item.id}}/{{item.title}}</a>
+<div id="backGround">
+
+
+
+
+  <div id="div-{{item.id}}" *ngFor="let item of movies">
+    <div class="divNave"><img src="../../../assets/images/nave2-4.png" alt="" height="200px" ></div>
+    <div class="divLine"></div>
+    <div class="divMovie"><a [routerLink]="[item.id]"><img src="{{item.poster}}"  alt="" width="250" height="380"></a></div>
+  </div>
+
+
 
 </div>
+
+<!--
+   <div id="div-2">
+    <div style="z-index: 2; position: relative;"><img src="../../../assets/images/nave2-4.png" alt="" height="200px"></div>
+    <div style="z-index: 1; position: absolute;top:150px; left:78px;padding: 1px; height: 110px; width: 1px; background-color: white;"></div>
+    <div style="margin-top: 50px;border: 5px solid white; width: fit-content;"><img src="{{movies[1].poster}}"  alt="" width="300px"></div>
+  </div>
+-->

@@ -1,3 +1,4 @@
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
   declarations: [
     AppComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

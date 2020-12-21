@@ -16,7 +16,8 @@ export class MovieService {
     return this.movies;
   }
 
-   getMovie(id:Number){
+  async getMovie(id:Number){
+      await this.getMovies();
       let movie = this.movies.find(data => data.id == id);
       return movie;
    }
