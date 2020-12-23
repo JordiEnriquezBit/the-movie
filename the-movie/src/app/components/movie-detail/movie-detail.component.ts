@@ -28,9 +28,7 @@ export class MovieDetailComponent implements OnInit,OnDestroy {
     this.routes.params.subscribe(
       (params: Params) => {
         let data = {...params}
-        console.log(data)
         this.movieServices.getMovie(data["id"]).then(data=>this.movie = data);
-        console.log(this.movie)
         /* this.src = params.avatar; */
       }
     )

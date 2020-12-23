@@ -16,6 +16,11 @@
       "William Sadler",
       "Clancy Brown",
       "Gil Bellows"
+    ],
+    "schedule":[
+      "Wednesday - 18:30",
+      "thursday - 19:30",
+      "friday - 20:30"
     ]
   }, {
     "id": 2,
@@ -34,6 +39,11 @@
       "Richard S. Castellano",
       "Robert Duvall",
       "Sterling Hayden"
+    ],
+    "schedule":[
+      "Wednesday - 18:30",
+      "thursday - 19:30",
+      "friday - 20:30"
     ]
   }, {
     "id": 3,
@@ -52,6 +62,11 @@
       "Robert De Niro",
       "John Cazale",
       "Talia Shire"
+    ],
+    "schedule":[
+      "Wednesday - 18:30",
+      "thursday - 19:30",
+      "friday - 20:30"
     ]
   }, {
     "id": 4,
@@ -70,6 +85,11 @@
       "Michael Caine",
       "Maggie Gyllenhaal",
       "Gary Oldman"
+    ],
+    "schedule":[
+      "Wednesday - 18:30",
+      "thursday - 19:30",
+      "friday - 20:30"
     ]
   }, {
     "id": 5,
@@ -88,6 +108,11 @@
       "Caroline Goodall",
       "Jonathan Sagall",
       "Embeth Dav"
+    ],
+    "schedule":[
+      "Wednesday - 18:30",
+      "thursday - 19:30",
+      "friday - 20:30"
     ]
   }
 ]

@@ -1,10 +1,69 @@
 <div *ngIf="movie!=null">
-<h2>Cinema</h2>
+  <h2 id="title">Cinema</h2>
 
-<h2><span>Room 2 </span> {{movie.title}}</h2>
-<div>
-  <div style="width: 50px; height: 200px;"><img src="{{movie.poster}}" alt="" style="object-fit: contain"></div>
-  <div></div>
+  <div id="mainMovie">
+    <h2><span>Room 2 </span> {{movie.title}}</h2>
+    <div id="showMovie">
+     <img src="{{movie.poster}}" alt="" width="200px">
+      <div id="description">
+        <div id="genres">
+          <div class="left">Genres</div>
+          <div>
+            <div *ngFor="let item of movie.genres">{{item}}</div>
+          </div>
+        </div>
+
+        <div id="year" class="separator">
+          <div class="left">Year</div>
+          <div>{{movie.year}}</div>
+        </div>
+
+        <div id="director" class="separator">
+          <div class="left">Director</div>
+          <div>{{movie.director}}</div>
+        </div>
+
+        <div id="actors" class="separator">
+          <div class="left">Actors</div>
+          <div>
+            <div *ngFor="let item of movie.actors">{{item}}</div>
+          </div>
+        </div>
+
+        <div id="schedule" class="separator">
+          <div class="left">Schedule</div>
+          <div>
+            <div *ngFor="let item of movie.schedule">{{item}}</div>
+          </div>
+        </div>
+
+        <div class="separator">Synopsis:</div>
+        <div class="separator">{{movie.synopsis}}</div>
+      </div>
+    </div>
+  </div>
+  <div id="button">
+      <button  mat-raised-button color="primary" >Home</button>
+    </div>
 </div>
-<button>Home</button>
-</div>
+
+<!--
+
+   <div id="genres">
+         <div >Genres</div> <div><div *ngFor="let item of movie.genres">{{item}}</div></div>
+        </div>
+        <div id="year">
+        <div>Year</div> <div>{{movie.year}}</div>
+      </div>
+        <div>Director {{movie.director}}</div>
+
+
+         <div id="left">
+            <div >Genres</div>
+            <div>Year</div>
+          </div>
+          <div id="right">
+            <div><div *ngFor="let item of movie.genres">{{item}}</div></div>
+            <div>{{movie.year}}</div>
+          </div>
+-->
