@@ -2,17 +2,17 @@ import { Movie } from './../model/movie/movie';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import  *  as  data  from  '../../../assets/movies.json';
+
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
   _jsonURL = '../data/movies.json';
-  movies:Movie[]=[];
+  movies=data["default"];
   constructor(private httpClient: HttpClient) {}
   async getMovies(){
-   await this.httpClient.get("../../../assets/movies.json").toPromise().then(data =>{
-      this.movies = data["movies"] as Movie[]
-    });
+
     return this.movies;
   }
 
