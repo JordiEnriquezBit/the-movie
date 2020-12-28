@@ -9,10 +9,9 @@ import  *  as  data  from  '../../../assets/movies.json';
 })
 export class MovieService {
   _jsonURL = '../data/movies.json';
-  movies=data["default"];
+  movies=data["default"].movies;
   constructor(private httpClient: HttpClient) {}
   async getMovies(){
-
     return this.movies;
   }
 
