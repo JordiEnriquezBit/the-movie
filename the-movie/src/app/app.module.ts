@@ -22,7 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule,
+    HttpClientModule
 
   ],
   providers: [],
